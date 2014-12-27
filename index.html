@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="@wcp_bot is a Twitter bot that tweets weather by wcp command from other Twitter users.">
+    <title>@wcp_bot on Twitter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        padding-bottom: 20px;
+      }
+      img {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-circle" src="wcp_bot_logo.png" alt="wcp_bot_logo">
+          </div>
+          <div class="col-md-8">
+            <h1>@wcp_bot<span class="text-muted"> on Twitter</span></h1>
+            <p class="lead">
+              <a href="https://twitter.com/wcp_bot">@wcp_bot</a> is a Twitter bot tweeting weather by <code>wcp</code> commands.<br />
+              <a href="https://twitter.com/wcp_bot">@wcp_bot</a> is using <a href="https://dev.twitter.com/streaming/overview">Twitter Streaming API</a> to mominor <code>wcp</code> commands and <a href="https://developer.yahoo.com/weather/">Yahoo Weather API</a> to obtain weather, and is working on <a href="https://www.heroku.com/">Heroku</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a class="twitter-timeline" href="https://twitter.com/wcp_bot" data-widget-id="548955079525822464">Tweets by @wcp_bot</a>
+          <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          </script>
+        </div>
+        <div class="col-md-8">
+          <h1>How to use:</h1>
+          <h2>STEP 1. Tweet a <code>wcp</code>command toward @wcp_bot</h2>
+          <p>
+            The command Syntax is
+<pre>
+@wcp_bot wcp [-hat] LOCATION_WORDS [ZIP_CODE STATE COUNTRY ...]
+</pre>
+            where the options are:<br />
+            <code>-h</code>: to show the help message,<br />
+            <code>-a</code>: to make the reply from @wcp_bot anonymous, and<br />
+            <code>-t</code>: to obtain weather for tomorrow.
+          </p>
+          <p>
+            For example, to @wcp_bot tweets the current weather in <b>San Francisco CA USA</b>, tweet the bellow with your Twitter account
+<pre>
+@wcp_bot wcp San Francisco CA USA
+</pre>
+          </p>
+          <p>
+            For example, to @wcp_bot tweets tomorrow's weather in <b>Tokyo JAPAN</b>, tweet the bellow with your Twitter account
+<pre>
+@wcp_bot wcp -t tokyo
+</pre>
+            ("tokyo" could be written as "東京".)
+          </p>
+
+          <h3>Q&amp;A</h3>
+          <p>
+            Q1. What if @wcp_bot guessed a wrong place?<br />
+            A1. Give more location words, such as zip code, state, country name.
+          </p>
+          <p>
+            Q2. What if @wcp_bot did not respond to your <code>wcp</code> command?<br />
+            A2. If your Twitter account appears to be <i>protected</i>, @wcp_bot cannot see your tweets publicly. In that case, please follow @wcp_bot first, and wait for @wcp_bot refollowing your Twitter account.
+          </p>
+
+          <h2>STEP 2. Done!</h2>
+          <p>
+            That's it! Any feedbacks would be appreciated.
+          </p>
+        </div>
+      </div>
+
+      <hr>
+      <footer>
+        <p>
+          &copy; zshiba (<a href="https://github.com/zshiba">https://github.com/zshiba</a>), 2014
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
+
